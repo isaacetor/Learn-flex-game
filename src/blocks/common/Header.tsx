@@ -17,8 +17,8 @@ const Header = () => {
 export default Header;
 
 const Levels = styled.div`
-  padding: 10px 20px;
-  background-color: red;
+  padding: 5px 20px;
+  background-color: #ffffff28;
 `;
 const Logo = styled.h2`
   margin: 0;

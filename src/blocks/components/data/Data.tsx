@@ -25,7 +25,7 @@ const Data = () => {
 export default Data;
 
 const Wrapper = styled.div`
-  background-color: #000;
+  background-color: #43a047;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -36,7 +36,7 @@ const Wrapper = styled.div`
 const Main = styled.div`
   width: 90%;
   height: 97%;
-  display: grid;
-  grid-template-rows: 0.2fr 1fr 0.2fr;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 `;

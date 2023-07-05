@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import Icon from "./Icon";
 
 const Graphic = () => {
   return (
     <div>
-      <Wrapper>asdfghjk</Wrapper>
+      <Wrapper>
+        <Icon />
+      </Wrapper>
     </div>
   );
 };
@@ -11,6 +14,9 @@ const Graphic = () => {
 export default Graphic;
 
 const Wrapper = styled.div`
-  background-color: #1b5b92;
+  background-color: #1f5768;
   height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 `;

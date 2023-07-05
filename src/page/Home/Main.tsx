@@ -31,5 +31,6 @@ const Wrapper = styled.div`
     & > :nth-child(2) {
       order: 1;
     }
+    height: 100%;
   }
 `;
