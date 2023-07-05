@@ -27,7 +27,7 @@ const Graphic = () => {
 export default Graphic;
 
 const Wrapper = styled.div<{ text: string }>`
-  background-color: #1f5768;
+  /* background-color: #1f5768; */
   height: 100%;
   padding: 20px;
   display: flex;

@@ -23,5 +23,7 @@ const Instruction = () => {
 export default Instruction;
 
 const Wrapper = styled.div`
-  font-family: Jost;
+  @media not all and (min-width: 890px) {
+    margin-top: 50px;
+  }
 `;

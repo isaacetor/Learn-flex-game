@@ -4,24 +4,25 @@ import { IconState } from "../util/state/Recoil";
 
 const GlobalButton = () => {
   const JustifyState = selector({
-    key: "charCountState", // unique ID (with respect to other atoms/selectors)
+    key: "charCountState",
     get: ({ get }) => {
       const text = get(IconState);
-
       return text;
     },
   });
 
-  const count = useRecoilValue(JustifyState);
+  const count = useRecoilValue(JustifyState).trim().replace(" ", "");
 
-  const trueText = "justify-content: center";
+  const trueText = "justify-content:center";
 
   return (
     <div>
       {trueText === count ? (
         <Wrapper>Next</Wrapper>
       ) : (
-        <Wrapper disabled>Next</Wrapper>
+        <Wrapper disabled style={{ cursor: "not-allowed" }}>
+          Next
+        </Wrapper>
       )}
     </div>
   );

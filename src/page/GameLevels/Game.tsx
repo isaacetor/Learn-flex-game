@@ -21,7 +21,9 @@ export default Game;
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  /* gap: 10; */
+
+  @media not all and (min-width: 890px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 `;

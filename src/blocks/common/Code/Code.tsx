@@ -6,6 +6,7 @@ import GlobalButton from "../../../props/GlobalButton";
 
 const Code = () => {
   const [text, setText] = useRecoilState(IconState);
+  text.trim();
 
   return (
     <div>
@@ -42,12 +43,12 @@ const Container = styled.div`
 
   textarea {
     flex: 1;
-    font-family: jost;
     font-size: 17px;
     color: #000000b0;
     outline: none;
     border: none;
     height: 44px;
+    font-family: poppins;
   }
 `;
 
@@ -64,11 +65,11 @@ const Coding = styled.div`
 `;
 
 const Wrapper = styled.div`
-  background-color: #e0e0e0;
+  background-color: #ffffff31;
   border-radius: 10px;
+  /* margin: 10px 0px; */
   height: 100%;
-  font-family: jost;
-  color: #999999;
+  color: #fff;
   padding: 10px;
   overflow: hidden;
   position: relative;
