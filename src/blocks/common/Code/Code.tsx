@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
+import { useRecoilState } from "recoil";
+import { IconState } from "../../../util/state/Recoil";
+import GlobalButton from "../../../props/GlobalButton";
+
 const Code = () => {
+  const [text, setText] = useRecoilState(IconState);
+
   return (
     <div>
       <Wrapper>
@@ -12,10 +18,15 @@ const Code = () => {
 
             {/* input area */}
 
-            <textarea name="" id="" rows="1"></textarea>
+            <textarea
+              onChange={(e) => {
+                setText(e.target.value);
+              }}
+            ></textarea>
           </Container>
           <p>{"}"}</p>
         </Coding>
+        <GlobalButton />
       </Wrapper>
     </div>
   );
@@ -25,7 +36,6 @@ export default Code;
 
 const Container = styled.div`
   width: 95%;
-  /* background-color: red; */
   margin-left: 30px;
   display: flex;
   flex-direction: column;
@@ -37,6 +47,7 @@ const Container = styled.div`
     color: #000000b0;
     outline: none;
     border: none;
+    height: 44px;
   }
 `;
 
@@ -60,4 +71,5 @@ const Wrapper = styled.div`
   color: #999999;
   padding: 10px;
   overflow: hidden;
+  position: relative;
 `;
