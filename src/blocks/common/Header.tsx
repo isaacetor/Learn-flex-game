@@ -16,7 +16,10 @@ const Header = () => {
 
 export default Header;
 
-const Levels = styled.div``;
+const Levels = styled.div`
+  padding: 10px 20px;
+  background-color: red;
+`;
 const Logo = styled.h2`
   margin: 0;
 `;
@@ -28,4 +31,10 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media not all and (min-width: 890px) {
+    padding: 10px 0 10px 0;
+    flex-direction: column;
+    gap: 5px;
+  }
 `;
