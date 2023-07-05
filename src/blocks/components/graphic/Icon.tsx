@@ -27,7 +27,7 @@ const pulseAnimation = keyframes`
 const Main = styled.div`
   width: 150px;
   height: 150px;
-  background-color: #43a047;
+  background-color: darkorange;
   border-radius: 999px;
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),

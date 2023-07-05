@@ -65,11 +65,11 @@ const Coding = styled.div`
 `;
 
 const Wrapper = styled.div`
-  background-color: #ffffff31;
+  background-color: #ffffff63;
   border-radius: 10px;
   /* margin: 10px 0px; */
   height: 100%;
-  color: #fff;
+  color: #000;
   padding: 10px;
   overflow: hidden;
   position: relative;

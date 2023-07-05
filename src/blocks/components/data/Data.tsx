@@ -27,14 +27,14 @@ export default Data;
 const Wrapper = styled.div`
   background-image: radial-gradient(
     circle farthest-corner at 22.4% 21.7%,
-    #43a047 0%,
-    green 100.2%
+    orange 0%,
+    darkorange 100.2%
   );
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #000;
 `;
 
 const Main = styled.div`
