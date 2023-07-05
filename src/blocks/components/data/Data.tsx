@@ -11,7 +11,7 @@ const Data = () => {
           {/* Header comp */}
           <Header />
 
-          {/* children */}
+          {/* children / levels */}
           <One />
 
           {/* footer comp */}
@@ -30,10 +30,13 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
 `;
 
 const Main = styled.div`
   width: 90%;
   height: 90%;
-  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `;

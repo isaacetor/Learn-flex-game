@@ -27,7 +27,6 @@ const Logo = styled.h2`
 const Wrapper = styled.div`
   width: 100%;
   padding: 15px 0 15px 0;
-  background-color: pink;
   display: flex;
   justify-content: space-between;
   align-items: center;
