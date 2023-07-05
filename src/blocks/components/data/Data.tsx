@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Header from "../../common/Header";
 import Footer from "../../common/Footer";
-import One from "../../../page/GameLevels/One";
+import Game from "../../../page/GameLevels/Game";
 
 const Data = () => {
   return (
@@ -12,7 +12,7 @@ const Data = () => {
           <Header />
 
           {/* children / levels */}
-          <One />
+          <Game />
 
           {/* footer comp */}
           <Footer />
@@ -25,7 +25,7 @@ const Data = () => {
 export default Data;
 
 const Wrapper = styled.div`
-  background-color: #7d03ba;
+  background-color: #000;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -35,8 +35,8 @@ const Wrapper = styled.div`
 
 const Main = styled.div`
   width: 90%;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
+  height: 97%;
+  display: grid;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
   gap: 10px;
 `;
