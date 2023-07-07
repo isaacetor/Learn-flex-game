@@ -17,11 +17,10 @@ const Main = () => {
           flex-end: Items align to the right side of the container. center:
           Items align at the center of the container. <br /> space-between:
           Items display with equal spacing between them. <br /> space-around:
-          Items display with equal spacing around them.
-"
+          Items display with equal spacing around them"
           exampleText="For example, justify-content: flex-end; will move the frog to the right"
           compareData="justify-content:flex-end"
-          routePath="level9"
+          routePath="2"
         />
         {/* container with game */}
         <Graphic />

@@ -18,17 +18,13 @@ const Code: FC<check> = ({ check, path }) => {
       <Wrapper>
         <Coding>
           <p>.pond {"{"}</p>
-
           <Container>
             <p>display: flex;</p>
-
             {/* input area */}
-
             <textarea
               onChange={(e) => {
                 setText(e.target.value);
-              }}
-            ></textarea>
+              }}></textarea>
           </Container>
           <p>{"}"}</p>
         </Coding>

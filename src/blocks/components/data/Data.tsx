@@ -18,7 +18,6 @@ const Data: FC<instructionData> = ({
         <Main>
           {/* Header comp */}
           <Header />
-
           {/* children / levels */}
           <Game
             titleText={titleText}
@@ -27,7 +26,6 @@ const Data: FC<instructionData> = ({
             compareData={compareData}
             routePath={routePath}
           />
-
           {/* footer comp */}
           <Footer />
         </Main>
