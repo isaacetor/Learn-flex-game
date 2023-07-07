@@ -49,7 +49,7 @@ const Box = styled.div`
   height: 100px;
   background-color: #070707;
   z-index: -1;
-  margin: 2px;
+  margin: 1px;
 `;
 
 const Wrapper = styled.div<{ text: string }>`
