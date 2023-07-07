@@ -33,7 +33,8 @@ const Main = () => {
 export default Main;
 
 const Wrapper = styled.div`
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

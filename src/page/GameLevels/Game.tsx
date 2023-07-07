@@ -46,6 +46,10 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: space-between;
 
+  p {
+    font-size: 15px;
+  }
+
   @media not all and (min-width: 890px) {
     display: flex;
     flex-direction: column-reverse;
