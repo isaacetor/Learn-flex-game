@@ -53,5 +53,5 @@ const Wrapper = styled.button`
   animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
   animation-iteration-count: infinite;
   /* background-color: red; */
-  /* color: #fff; */
+  color: #fff;
 `;
