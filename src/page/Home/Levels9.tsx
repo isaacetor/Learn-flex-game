@@ -3,18 +3,22 @@
 import styled from "styled-components"
 import Data from "../../blocks/components/data/Data";
 
-import Graphic13 from "../../blocks/components/graphic/Graphic9";
+
 import Graphic9 from "../../blocks/components/graphic/Graphic9";
 
-const Level9 = () => {
+const Levels9 = () => {
   return (
     <div>
       <Wrapper>
         {/* container with data */}
         <Data
-          titleText=""
-          definitionText="Help the frogs find their lilypads using flex,direction, justify-content, and align-items"
-          exampleText="For example, justify-content: flex-end; will move the frog to the right"
+          titleText="Help the frogs find their column of lilypads using flex-direction. This CSS property defines the direction items are placed in the container, and accepts the following values:"
+          definitionText="row: Items are placed the same as the text direction.
+          row-reverse: Items are placed opposite to the text direction.
+          column: Items are placed top to bottom.
+          column-reverse: Items are placed bottom to top."
+          exampleText=""
+          compareData="flex-direction: column"
         />
         {/* container with game */}
         <Graphic9 />
@@ -23,7 +27,7 @@ const Level9 = () => {
   );
 }
 
-export default Level9
+export default Levels9
 
 const Wrapper = styled.div`
   height: 100vh;

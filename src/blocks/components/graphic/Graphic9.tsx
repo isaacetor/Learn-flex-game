@@ -1,12 +1,4 @@
 
-
-
-
-
-
-
-
-
 import styled from "styled-components";
 import Icon from "./Icon";
 import { selector, useRecoilValue } from "recoil";
@@ -27,8 +19,17 @@ const Graphic9 = () => {
   return (
     <div>
       <Wrapper text={count}>
-        <Box></Box>
-        <Icon />
+        <Div>
+          <Box></Box>
+          <Box></Box>
+          <Box></Box>
+        </Div>
+       
+          <Icon />
+          
+          <Icon />
+          <Icon />
+      
       </Wrapper>
     </div>
   );
@@ -36,21 +37,35 @@ const Graphic9 = () => {
 
 export default Graphic9;
 
+const Div = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  z-index: -9;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`;
+
 const Box = styled.div`
   width: 100px;
   height: 100px;
-  position: absolute;
+  margin-right: 100px;
+  /* position: absolute; */
   background-color: #070707;
-  right: 20px;
-  top: 20px;
   z-index: -1;
 `;
 
 const Wrapper = styled.div<{ text: string }>`
   background-color: #fff;
   height: 100%;
+  
   padding: 20px;
   display: flex;
+  gap: 12px;
   ${(props) => props.text};
   position: relative;
   z-index: 999;
