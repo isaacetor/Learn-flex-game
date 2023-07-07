@@ -16,6 +16,7 @@ space-between: Items display with equal spacing between them.
 space-around: Items display with equal spacing around them."
           exampleText="Use justify-content again to help these frogs get to their lilypads. Remember that this CSS property aligns items horizontally and accepts the following values:"
           compareData="justify-content:center"
+          routePath="3"
         />
         {/* container with game */}
         <Level2Graphic />

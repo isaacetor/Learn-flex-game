@@ -20,7 +20,7 @@ const Main = () => {
           Items display with equal spacing around them"
           exampleText="For example, justify-content: flex-end; will move the frog to the right"
           compareData="justify-content:flex-end"
-          routePath="level9"
+          routePath="2"
         />
         {/* container with game */}
         <Graphic />
