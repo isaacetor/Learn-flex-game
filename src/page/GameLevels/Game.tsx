@@ -3,7 +3,12 @@ import { FC } from "react";
 import Code from "../../blocks/common/Code/Code";
 import { gameData } from "../../util/types";
 
-const Game: FC<gameData> = ({ titleText, definitionText, exampleText }) => {
+const Game: FC<gameData> = ({
+  titleText,
+  definitionText,
+  exampleText,
+  compareData,
+}) => {
   return (
     <div>
       <Wrapper>
@@ -17,7 +22,7 @@ const Game: FC<gameData> = ({ titleText, definitionText, exampleText }) => {
         {/* example section */}
         <p>{exampleText}</p>
         {/* game code */}
-        <Code />
+        <Code check={compareData!} />
       </Wrapper>
     </div>
   );

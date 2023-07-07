@@ -1,10 +1,14 @@
 import styled from "styled-components";
-
+import { FC } from "react";
 import { useRecoilState } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
 import GlobalButton from "../../../props/GlobalButton";
 
-const Code = () => {
+interface check {
+  check: string;
+}
+
+const Code: FC<check> = ({ check }) => {
   const [text, setText] = useRecoilState(IconState);
   text.trim();
 
@@ -27,7 +31,7 @@ const Code = () => {
           </Container>
           <p>{"}"}</p>
         </Coding>
-        <GlobalButton />
+        <GlobalButton compare={check} />
       </Wrapper>
     </div>
   );
