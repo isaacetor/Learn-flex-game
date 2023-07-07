@@ -1,10 +1,15 @@
 import styled from "styled-components";
-
+import { FC } from "react";
 import { useRecoilState } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
 import GlobalButton from "../../../props/GlobalButton";
 
-const Code = () => {
+interface check {
+  check: string;
+  path: string;
+}
+
+const Code: FC<check> = ({ check, path }) => {
   const [text, setText] = useRecoilState(IconState);
   text.trim();
 
@@ -13,21 +18,17 @@ const Code = () => {
       <Wrapper>
         <Coding>
           <p>.pond {"{"}</p>
-
           <Container>
             <p>display: flex;</p>
-
             {/* input area */}
-
             <textarea
               onChange={(e) => {
                 setText(e.target.value);
-              }}
-            ></textarea>
+              }}></textarea>
           </Container>
           <p>{"}"}</p>
         </Coding>
-        <GlobalButton />
+        <GlobalButton compare={check} route={path} />
       </Wrapper>
     </div>
   );

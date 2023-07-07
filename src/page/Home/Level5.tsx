@@ -1,35 +1,30 @@
 import styled from "styled-components";
-import Graphic from "../../blocks/components/graphic/Graphic";
 import Data from "../../blocks/components/data/Data";
-
-const Main = () => {
+import Level5Graphic from "../../blocks/components/graphic/Level5Graphic";
+const Level5 = () => {
   return (
     <div>
       <Wrapper>
         {/* container with data */}
         <Data
-          titleText="Welcome to LearnFlex, a game where you help Joan and friends by writing
-        CSS code! Guide Joan to the lilypad on the right by using the
-        justify-content property, which aligns items horizontally and accepts
-        the following values:"
+          titleText="Now use align-items to help the frogs get to the bottom of the pond. This CSS property aligns items vertically and accepts the following values:"
           definitionText="flex-start: Items align to the left side of the container.
           <br />
-          flex-end: Items align to the right side of the container. center:
+          flex-start: Items align to the top of the container.
           Items align at the center of the container. <br /> space-between:
-          Items display with equal spacing between them. <br /> space-around:
-          Items display with equal spacing around them"
-          exampleText="For example, justify-content: flex-end; will move the frog to the right"
-          compareData="justify-content:flex-end"
-          routePath="2"
+          center: Items align at the vertical center of the container. <br /> baseline: Items display at the baseline of the container.
+          flex-end: Items align to the bottom of the container.
+"
+          exampleText=""
         />
         {/* container with game */}
-        <Graphic />
+        <Level5Graphic />
       </Wrapper>
     </div>
   );
 };
 
-export default Main;
+export default Level5;
 
 const Wrapper = styled.div`
   height: 100vh;

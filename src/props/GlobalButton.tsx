@@ -1,8 +1,11 @@
 import { selector, useRecoilValue } from "recoil";
 import { styled, keyframes } from "styled-components";
 import { IconState } from "../util/state/Recoil";
+import { compareData } from "../util/types";
+import { FC } from "react";
+import { Link } from "react-router-dom";
 
-const GlobalButton = () => {
+const GlobalButton: FC<compareData> = ({ compare, route }) => {
   const JustifyState = selector({
     key: "charCountState",
     get: ({ get }) => {
@@ -13,12 +16,14 @@ const GlobalButton = () => {
 
   const count = useRecoilValue(JustifyState).trim().replace(" ", "");
 
-  const trueText = "justify-content:center";
+  let trueText = `${compare}`;
 
   return (
     <div>
-      {trueText === count ? (
-        <Wrapper>Next</Wrapper>
+      {trueText! === count ? (
+        <Link to={`/${route}`}>
+          <Wrapper>Next</Wrapper>
+        </Link>
       ) : (
         <Wrapper disabled style={{ cursor: "not-allowed" }}>
           Next
@@ -52,6 +57,4 @@ const Wrapper = styled.button`
   animation-duration: 2s;
   animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
   animation-iteration-count: infinite;
-  /* background-color: red; */
-  color: #fff;
 `;

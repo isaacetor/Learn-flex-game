@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-const Header = () => {
+type changeLevel = {
+  lev : string
+}
+
+const Header:React.FC<changeLevel> = ({lev}) => {
   return (
     <div>
       <Wrapper>
@@ -8,7 +12,7 @@ const Header = () => {
         <Logo>Learn Flex</Logo>
 
         {/* level display */}
-        <Levels>Level 1</Levels>
+        <Levels>{lev}</Levels>
       </Wrapper>
     </div>
   );
