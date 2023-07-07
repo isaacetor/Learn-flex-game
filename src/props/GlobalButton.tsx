@@ -3,8 +3,9 @@ import { styled, keyframes } from "styled-components";
 import { IconState } from "../util/state/Recoil";
 import { compareData } from "../util/types";
 import { FC } from "react";
+import { Link } from "react-router-dom";
 
-const GlobalButton: FC<compareData> = ({ compare }) => {
+const GlobalButton: FC<compareData> = ({ compare, route }) => {
   const JustifyState = selector({
     key: "charCountState",
     get: ({ get }) => {
@@ -20,7 +21,9 @@ const GlobalButton: FC<compareData> = ({ compare }) => {
   return (
     <div>
       {trueText! === count ? (
-        <Wrapper>Next</Wrapper>
+        <Link to={`/${route}`}>
+          <Wrapper>Next</Wrapper>
+        </Link>
       ) : (
         <Wrapper disabled style={{ cursor: "not-allowed" }}>
           Next

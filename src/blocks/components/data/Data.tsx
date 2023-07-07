@@ -10,12 +10,14 @@ const Data: FC<instructionData> = ({
   definitionText,
   exampleText,
   compareData,
+  routePath,
 }) => {
   return (
     <div>
       <Wrapper>
         <Main>
           {/* Header comp */}
+         
           <Header lev="level 1" />
 
           {/* children / levels */}
@@ -24,8 +26,8 @@ const Data: FC<instructionData> = ({
             exampleText={exampleText}
             definitionText={definitionText}
             compareData={compareData}
+            routePath={routePath}
           />
-
           {/* footer comp */}
           <Footer />
         </Main>

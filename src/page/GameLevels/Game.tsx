@@ -8,6 +8,7 @@ const Game: FC<gameData> = ({
   definitionText,
   exampleText,
   compareData,
+  routePath,
 }) => {
   return (
     <div>
@@ -15,17 +16,14 @@ const Game: FC<gameData> = ({
         {/* game instructions */}
         {/* title */}
         <p>{titleText}</p>
-
         {/* definitions section */}
         <Definition>
           <p>{definitionText}</p>
         </Definition>
-
         {/* example section */}
         <p>{exampleText}</p>
-
         {/* game code */}
-        <Code check={compareData!} />
+        <Code check={compareData!} path={routePath!} />
       </Wrapper>
     </div>
   );

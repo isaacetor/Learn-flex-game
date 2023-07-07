@@ -6,9 +6,10 @@ import GlobalButton from "../../../props/GlobalButton";
 
 interface check {
   check: string;
+  path: string;
 }
 
-const Code: FC<check> = ({ check }) => {
+const Code: FC<check> = ({ check, path }) => {
   const [text, setText] = useRecoilState(IconState);
   text.trim();
 
@@ -17,21 +18,17 @@ const Code: FC<check> = ({ check }) => {
       <Wrapper>
         <Coding>
           <p>.pond {"{"}</p>
-
           <Container>
             <p>display: flex;</p>
-
             {/* input area */}
-
             <textarea
               onChange={(e) => {
                 setText(e.target.value);
-              }}
-            ></textarea>
+              }}></textarea>
           </Container>
           <p>{"}"}</p>
         </Coding>
-        <GlobalButton compare={check} />
+        <GlobalButton compare={check} route={path} />
       </Wrapper>
     </div>
   );
