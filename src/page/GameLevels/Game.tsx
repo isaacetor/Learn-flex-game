@@ -10,15 +10,12 @@ const Game: FC<gameData> = ({ titleText, definitionText, exampleText }) => {
         {/* game instructions */}
         {/* title */}
         <p>{titleText}</p>
-
         {/* definitions section */}
         <Definition>
           <p>{definitionText}</p>
         </Definition>
-
         {/* example section */}
         <p>{exampleText}</p>
-
         {/* game code */}
         <Code />
       </Wrapper>

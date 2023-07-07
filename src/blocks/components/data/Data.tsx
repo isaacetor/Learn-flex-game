@@ -16,14 +16,12 @@ const Data: FC<instructionData> = ({
         <Main>
           {/* Header comp */}
           <Header />
-
           {/* children / levels */}
           <Game
             titleText={titleText}
             exampleText={exampleText}
             definitionText={definitionText}
           />
-
           {/* footer comp */}
           <Footer />
         </Main>
