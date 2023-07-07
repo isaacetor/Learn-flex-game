@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../page/Home/Main";
-import Level14 from "../page/Home/Level14";
+import Level14 from "../page/Home/Level9";
+import Level9 from "../page/Home/Level9";
 
 export const routes = createBrowserRouter([
   {
@@ -10,6 +11,6 @@ export const routes = createBrowserRouter([
 
   {
     path:"/level14",
-    element: <Level14 />,
+    element: <Level9/>,
   }
 ]);
