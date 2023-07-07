@@ -16,15 +16,12 @@ const Game: FC<gameData> = ({
         {/* game instructions */}
         {/* title */}
         <p>{titleText}</p>
-
         {/* definitions section */}
         <Definition>
           <p>{definitionText}</p>
         </Definition>
-
         {/* example section */}
         <p>{exampleText}</p>
-
         {/* game code */}
         <Code check={compareData!} path={routePath!} />
       </Wrapper>
