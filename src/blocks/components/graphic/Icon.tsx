@@ -4,7 +4,7 @@ const Icon = () => {
   return (
     <div>
       <Main>
-        <p>Joan</p>
+        <p>icon</p>
       </Main>
     </div>
   );
@@ -25,8 +25,8 @@ const pulseAnimation = keyframes`
 `;
 
 const Main = styled.div`
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   background-color: darkorange;
   border-radius: 999px;
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
