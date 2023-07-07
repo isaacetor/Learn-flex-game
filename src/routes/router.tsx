@@ -5,7 +5,12 @@ import Level2 from "../page/Home/Level2";
 import Level3 from "../page/Home/Level3";
 import Level4 from "../page/Home/Level4";
 import Levels9 from "../page/Home/Levels9";
+
+import Level10 from "../page/Home/Level10";
+
+
 import Level5 from "../page/Home/Level5";
+
 export const routes = createBrowserRouter([
   {
     path: "/",
@@ -28,11 +33,17 @@ export const routes = createBrowserRouter([
     element: <Level4 />,
   },
   {
+
     path:"/level5",
     element: <Level5 />,
   },
   {
-    path: "/level9",
+    path: "/9",
     element: <Levels9 />,
   },
+{
+  path:"/10",
+  element:<Level10/>
+}
+
 ]);

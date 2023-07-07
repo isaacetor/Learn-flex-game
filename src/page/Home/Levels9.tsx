@@ -18,7 +18,8 @@ const Levels9 = () => {
           column: Items are placed top to bottom.
           column-reverse: Items are placed bottom to top."
           exampleText=""
-          compareData="flex-direction: column"
+          compareData="flex-direction:column"
+          routePath="10"
         />
         {/* container with game */}
         <Graphic9 />
