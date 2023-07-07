@@ -11,6 +11,7 @@ const Level4 = () => {
           titleText=""
           definitionText=""
           exampleText="Now the lilypads on the edges have drifted to the shore, increasing the space between them. Use justify-content. This time, the lilypads have equal spacing between them."
+          compareData="justify-content:space-between"
         />
         {/* container with game */}
         <Level4Graphic />

@@ -11,6 +11,7 @@ const Level3 = () => {
           titleText="If you find yourself forgetting the possible values for a property, you can click on the property name to view them. Try clicking on justify-content."
           definitionText=""
           exampleText="Help all three frogs find their lilypads just by using justify-content. This time, the lilypads have lots of space all around them."
+          compareData="justify-content:space-around"
         />
         {/* container with game */}
         <Level3Graphic />
