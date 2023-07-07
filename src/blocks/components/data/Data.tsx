@@ -9,6 +9,8 @@ const Data: FC<instructionData> = ({
   titleText,
   definitionText,
   exampleText,
+  compareData,
+  routePath,
 }) => {
   return (
     <div>
@@ -16,14 +18,14 @@ const Data: FC<instructionData> = ({
         <Main>
           {/* Header comp */}
           <Header />
-
           {/* children / levels */}
           <Game
             titleText={titleText}
             exampleText={exampleText}
             definitionText={definitionText}
+            compareData={compareData}
+            routePath={routePath}
           />
-
           {/* footer comp */}
           <Footer />
         </Main>
