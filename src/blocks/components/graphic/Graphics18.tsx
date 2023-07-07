@@ -28,7 +28,7 @@ const Graphics18 = () => {
           </Wrapper>
           <Column>
               {numberoFBox.map((e) => (
-                  <Icon key={e}></Icon>
+                  <Icon key={e}>hfhfh</Icon>
               ))}
           </Column>
     </Container>
