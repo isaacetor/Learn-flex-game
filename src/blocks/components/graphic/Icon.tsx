@@ -28,13 +28,10 @@ const pulseAnimation = keyframes`
   }
 `;
 
-
 const Main = styled.div<{bgCol?: string}>`
   width: 100px;
   height: 100px;
   background-color: ${({bgCol})=> bgCol};
-
-
   border-radius: 999px;
   top: 0;
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
