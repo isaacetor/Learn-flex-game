@@ -10,6 +10,7 @@ const Data: FC<instructionData> = ({
   definitionText,
   exampleText,
   compareData,
+  routePath,
 }) => {
   return (
     <div>
@@ -24,6 +25,7 @@ const Data: FC<instructionData> = ({
             exampleText={exampleText}
             definitionText={definitionText}
             compareData={compareData}
+            routePath={routePath}
           />
 
           {/* footer comp */}
