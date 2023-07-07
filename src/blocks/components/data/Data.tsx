@@ -2,8 +2,14 @@ import styled from "styled-components";
 import Header from "../../common/Header";
 import Footer from "../../common/Footer";
 import Game from "../../../page/GameLevels/Game";
+import { instructionData } from "../../../util/types";
+import { FC } from "react";
 
-const Data = () => {
+const Data: FC<instructionData> = ({
+  titleText,
+  definitionText,
+  exampleText,
+}) => {
   return (
     <div>
       <Wrapper>
@@ -12,7 +18,11 @@ const Data = () => {
           <Header />
 
           {/* children / levels */}
-          <Game />
+          <Game
+            titleText={titleText}
+            exampleText={exampleText}
+            definitionText={definitionText}
+          />
 
           {/* footer comp */}
           <Footer />
@@ -39,8 +49,9 @@ const Wrapper = styled.div`
 
 const Main = styled.div`
   width: 90%;
-  height: 97%;
+  height: 100%;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   gap: 10px;
 `;

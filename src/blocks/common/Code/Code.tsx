@@ -54,7 +54,7 @@ const Container = styled.div`
 
 const Coding = styled.div`
   width: 100%;
-  height: 30vh;
+  height: 35vh;
   display: flex;
   flex-direction: column;
 
