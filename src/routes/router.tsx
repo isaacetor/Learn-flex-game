@@ -3,7 +3,7 @@ import Main from "../page/Home/Main";
 import Level2 from "../page/Home/Level2";
 import Level3 from "../page/Home/Level3";
 import Level4 from "../page/Home/Level4";
-import Level9 from "../page/GameLevels/Level9";
+import Levels9 from "../page/Home/Levels9";
 
 export const routes = createBrowserRouter([
   {
@@ -24,6 +24,6 @@ export const routes = createBrowserRouter([
   },
   {
     path: "/level9",
-    element: <Level9 />,
+    element: <Levels9 />,
   },
 ]);
