@@ -3,7 +3,7 @@ import Icon from "./Icon";
 import { selector, useRecoilValue } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
 
-const Graphic10 = () => {
+const Graphics13 = () => {
   const JustifyState = selector({
     key: "charCountState", // unique ID (with respect to other atoms/selectors)
     get: ({ get }) => {
@@ -24,51 +24,50 @@ const Graphic10 = () => {
           <Box></Box>
         </Div>
 
-    
-          <Icon bgCol="darkorange" />
-          <Icon bgCol="red" />
-          <Icon bgCol="green" />
-       
+        <Icon bgCol="#158b2e95" />
+
+        <Icon bgCol="#751c0697" />
+        <Icon bgCol="darkorange" />
       </Wrapper>
     </div>
   );
 };
 
-export default Graphic10;
-
-
+export default Graphics13;
 
 const Div = styled.div`
   position: absolute;
-  top: 0;
+ 
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  padding: 20px;
+
   z-index: -9;
   display: flex;
-
+  justify-content: center;
+  align-items: flex-end;
   gap: 12px;
 `;
 
 const Box = styled.div`
   width: 100px;
   height: 100px;
-  /* margin-right: 100px;
-  position: absolute; */
+  display: flex;
+ margin-bottom: 21px;
+  /* margin-right: 100px; */
+  /* position: absolute; */
   background-color: #070707;
- 
   z-index: -1;
 `;
 
 const Wrapper = styled.div<{ text: string }>`
   background-color: #fff;
   height: 100%;
-  gap:12px;
-  
+
   padding: 20px;
   display: flex;
-  justify-content: flex-start;
+  gap: 12px;
   ${(props) => props.text};
   position: relative;
   z-index: 999;
@@ -77,6 +76,3 @@ const Wrapper = styled.div<{ text: string }>`
     height: 50vh;
   }
 `;
-
-
-

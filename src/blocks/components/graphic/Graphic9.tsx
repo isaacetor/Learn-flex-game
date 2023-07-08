@@ -24,12 +24,11 @@ const Graphic9 = () => {
           <Box></Box>
           <Box></Box>
         </Div>
-       
-          <Icon />
-          
-          <Icon />
-          <Icon />
-      
+
+        <Icon bgCol="#158b2e95" />
+
+        <Icon bgCol="#751c0697" />
+        <Icon bgCol="darkorange" />
       </Wrapper>
     </div>
   );

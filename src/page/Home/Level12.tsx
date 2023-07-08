@@ -1,29 +1,28 @@
+import styled from "styled-components";
 
-
-import styled from "styled-components"
 import Data from "../../blocks/components/data/Data";
-import Graphic10 from "../../blocks/components/graphic/Graphic10";
+import Graphic12 from "../../blocks/components/graphic/Graphics12";
 
-const Level10 = () => {
+const Level12 = () => {
   return (
     <div>
       <Wrapper>
         {/* container with data */}
         <Data
-          titleText="Help the frogs get to their own lilypads. Although they seem close, it will take both flex-direction and justify-content to get them there."
-          definitionText="Notice that when you set the direction to a reversed row or column, start and end are also reversed."
+          titleText="Help the frogs find their lilypads using flex-direction and justify-content."
+          definitionText=""
           exampleText=""
-          routePath="11"
-          compareData="flex-direction:row-reverse;justify-content:flex-end"
+          compareData="flex-direction:column-reverse; justify-content: space-between"
+          routePath="13"
         />
         {/* container with game */}
-        <Graphic10 />
+        <Graphic12 />
       </Wrapper>
     </div>
   );
-}
+};
 
-export default Level10
+export default Level12;
 
 const Wrapper = styled.div`
   height: 100vh;
