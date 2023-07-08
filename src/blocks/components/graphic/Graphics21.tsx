@@ -51,7 +51,6 @@ const Wrap = styled.div`
   height: 18%;
   margin: 3px;
   flex-wrap: wrap;
-  background-color: purple;
 `;
 
 const Box = styled.div`
