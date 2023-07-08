@@ -45,8 +45,8 @@ const Div = styled.div`
 `;
 
 const Box = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   background-color: #070707;
   z-index: -1;
   margin: 1px;

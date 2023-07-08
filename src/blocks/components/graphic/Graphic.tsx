@@ -28,8 +28,8 @@ const Graphic = () => {
 export default Graphic;
 
 const Box = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   position: absolute;
   background-color: #070707;
   right: 20px;

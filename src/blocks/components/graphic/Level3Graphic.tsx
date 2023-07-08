@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { selector, useRecoilValue } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
 import Icon2 from "./Icon2";
+import Icon from "./Icon";
 
 const Level3Graphic = () => {
   const JustifyState = selector({
@@ -20,8 +21,8 @@ const Level3Graphic = () => {
           <Box style={{ marginLeft: "18px" }}></Box>
           <Box2 style={{ marginRight: "19px" }}></Box2>
         </Div>
-        <Icon2 />
-        <Icon2 />
+        <Icon />
+        <Icon />
       </Wrapper>
     </div>
   );
@@ -40,15 +41,15 @@ const Div = styled.div`
   justify-content: space-around;
 `;
 const Box2 = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   background-color: #070707;
   z-index: -1;
 `;
 
 const Box = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   background-color: #070707;
   z-index: -1;
 `;
