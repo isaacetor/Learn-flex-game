@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { selector, useRecoilValue } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
-import Icon2 from "./Icon2";
-import Icon from "./Icon";
+import Iconify from "./Iconify";
 
 const Level3Graphic = () => {
   const JustifyState = selector({
@@ -21,8 +20,8 @@ const Level3Graphic = () => {
           <Box style={{ marginLeft: "18px" }}></Box>
           <Box2 style={{ marginRight: "19px" }}></Box2>
         </Div>
-        <Icon />
-        <Icon />
+        <Iconify bgCol="red" />
+        <Iconify bgCol="blue" />
       </Wrapper>
     </div>
   );
@@ -43,19 +42,19 @@ const Div = styled.div`
 const Box2 = styled.div`
   width: 60px;
   height: 60px;
-  background-color: #070707;
+  background-color: orange;
   z-index: -1;
 `;
 
 const Box = styled.div`
   width: 60px;
   height: 60px;
-  background-color: #070707;
+  background-color: orange;
   z-index: -1;
 `;
 
 const Wrapper = styled.div<{ text: string }>`
-  background-color: #fff;
+  background-color: #1c1c1c;
   height: 100%;
   padding: 20px;
   display: flex;
