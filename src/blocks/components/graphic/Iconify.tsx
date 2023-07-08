@@ -4,7 +4,7 @@ type Cols = {
   bgCol?: string;
 };
 
-const Icon: React.FC<Cols> = ({ bgCol }) => {
+const Iconify: React.FC<Cols> = ({ bgCol }) => {
   return (
     <div>
       <Main bgCol={bgCol}>
@@ -14,7 +14,7 @@ const Icon: React.FC<Cols> = ({ bgCol }) => {
   );
 };
 
-export default Icon;
+export default Iconify;
 
 const pulseAnimation = keyframes`
   0% {
@@ -29,8 +29,8 @@ const pulseAnimation = keyframes`
 `;
 
 const Main = styled.div<{ bgCol?: string }>`
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   background-color: ${({ bgCol }) => bgCol};
   border-radius: 999px;
   top: 0;

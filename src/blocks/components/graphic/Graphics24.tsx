@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { selector, useRecoilValue } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
 
-const Graphics18 = () => {
+const Graphics24 = () => {
     const numberoFBox = [1, 2, 3, 4, 5, 6, 7]
 
 
@@ -35,7 +35,7 @@ const Graphics18 = () => {
   );
 };
 
-export default Graphics18;
+export default Graphics24;
 const Icon = styled.div`
   width: 18%;
   height: 17%;
@@ -50,6 +50,8 @@ const Wrap = styled.div`
   align-items: center;
   height: 18%;
   margin: 3px;
+  flex-wrap: wrap;
+  /* background-color: purple; */
 `;
 
 const Box = styled.div`
@@ -64,8 +66,9 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+   align-items: center;
   position: relative;
+  justify-content: center;
 `;
 const Wrapper = styled.div<{ value: string }>`
   display: flex;
@@ -74,12 +77,18 @@ const Wrapper = styled.div<{ value: string }>`
   padding: 1em;
   ${(props) => props.value};
   position: absolute;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;;
 `;
 const Column = styled.div`
-  display: flex;
+ display: flex;
   width: 100%;
-  flex-flow:  wrap;
-  background-color: green;
+  flex-direction: column;
   height: 100%;
-  /* padding: 1em; */
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+  padding: 1em;
 `;
+ 
