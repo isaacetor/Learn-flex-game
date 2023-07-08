@@ -17,7 +17,9 @@ const Data: FC<instructionData> = ({
       <Wrapper>
         <Main>
           {/* Header comp */}
-          <Header />
+         
+          <Header lev="level 1" />
+
           {/* children / levels */}
           <Game
             titleText={titleText}
