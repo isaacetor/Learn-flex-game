@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { selector, useRecoilValue } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
 
-const Graphics18 = () => {
-    const numberoFBox = [1, 2, 3, 4, 5, 6, 7]
+const Graphics22 = () => {
+    const numberoFBox = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
 
   const JustifyState = selector({
@@ -35,7 +35,7 @@ const Graphics18 = () => {
   );
 };
 
-export default Graphics18;
+export default Graphics22;
 const Icon = styled.div`
   width: 18%;
   height: 17%;
@@ -50,6 +50,8 @@ const Wrap = styled.div`
   align-items: center;
   height: 18%;
   margin: 3px;
+  flex-wrap: wrap;
+  background-color: purple;
 `;
 
 const Box = styled.div`
@@ -64,7 +66,7 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+   align-items: center;
   position: relative;
 `;
 const Wrapper = styled.div<{ value: string }>`
@@ -74,12 +76,14 @@ const Wrapper = styled.div<{ value: string }>`
   padding: 1em;
   ${(props) => props.value};
   position: absolute;
+  flex-wrap: wrap;
 `;
 const Column = styled.div`
-  display: flex;
+ display: flex;
   width: 100%;
-  flex-flow:  wrap;
-  background-color: green;
+  align-content: flex-end;
   height: 100%;
-  /* padding: 1em; */
+  flex-wrap: wrap;
+  padding: 1em;
 `;
+ 

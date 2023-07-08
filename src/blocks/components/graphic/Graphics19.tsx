@@ -3,7 +3,7 @@ import { selector, useRecoilValue } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
 
 const Graphics18 = () => {
-    const numberoFBox = [1, 2, 3, 4, 5, 6, 7]
+    const numberoFBox = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
 
   const JustifyState = selector({
@@ -78,8 +78,11 @@ const Wrapper = styled.div<{ value: string }>`
 const Column = styled.div`
   display: flex;
   width: 100%;
-  flex-flow:  wrap;
+  flex-direction: column;
+  flex-wrap:  wrap;
+  align-items: center;
   background-color: green;
   height: 100%;
   /* padding: 1em; */
 `;
+ 
