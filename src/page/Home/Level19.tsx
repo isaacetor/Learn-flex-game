@@ -20,7 +20,8 @@ const Level19 = () => {
           Items display with equal spacing around them.
 "
                   exampleText="For example, justify-content: flex-end; will move the frog to the right"
-                  compareData="flex-direction: column; flex-wrap: wrap"
+                  compareData="flex-direction:column; flex-wrap:wrap;"
+                  routePath="level20"
         />
         {/* container with game */}
         <Graphics19 />
