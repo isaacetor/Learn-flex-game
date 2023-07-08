@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Graphics18 from "../../blocks/components/graphic/Graphics18";
+import Graphics22 from "../../blocks/components/graphic/Graphics22";
 import Data from "../../blocks/components/data/Data";
 
-const Level18 = () => {
+const Level22 = () => {
   return (
     <div>
       <Wrapper>
@@ -20,16 +20,16 @@ const Level18 = () => {
           Items display with equal spacing around them.
 "
                   exampleText="For example, justify-content: flex-end; will move the frog to the right"
-                  compareData="flex-wrap: wrap"
+                  compareData="align-content: flex-end"
         />
         {/* container with game */}
-        <Graphics18 />
+        <Graphics22 />
       </Wrapper>
     </div>
   );
 };
 
-export default Level18;
+export default Level22;
 
 const Wrapper = styled.div`
   height: 100vh;
