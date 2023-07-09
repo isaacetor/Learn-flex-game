@@ -22,6 +22,8 @@ const Level18 = () => {
           exampleText="For example, justify-content: flex-end; will move the frog to the right"
           compareData="flex-wrap:wrap;"
           routePath="level19"
+          lev="18"
+          ContainerTwo="none"
         />
         {/* container with game */}
         <Graphics18 />

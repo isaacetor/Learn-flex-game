@@ -36,8 +36,8 @@ const Graphics18 = () => {
 
 export default Graphics18;
 const Icon = styled.div`
-  width: 10%;
-  height: 10%;
+  width: 17%;
+  height: 18%;
   margin: 5px;
   background-color: blue;
 `;

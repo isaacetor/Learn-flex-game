@@ -13,16 +13,18 @@ const Level24 = () => {
         justify-content property, which aligns items horizontally and accepts
         the following values:"
           definitionText="flex-start: Items align to the left side of the container.
-          <br />
+        
           flex-end: Items align to the right side of the container. center:
-          Items align at the center of the container. <br /> space-between:
-          Items display with equal spacing between them. <br /> space-around:
+          Items align at the center of the container.  space-between:
+          Items display with equal spacing between them. space-around:
           Items display with equal spacing around them
 "
-                  exampleText="For example, justify-content: flex-end; will move the frog to the right"
-                  compareData="flex-flow:column-reverse wrap-reverse;
+          exampleText="For example, justify-content: flex-end; will move the frog to the right"
+          compareData="flex-flow:column-reverse wrap-reverse;
     justify-content:center;
-    align-content:space-between;;"
+    align-content:space-between"
+          lev="24"
+          ContainerTwo="none"
         />
         {/* container with game */}
         <Graphics24 />

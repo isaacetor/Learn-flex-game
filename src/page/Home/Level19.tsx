@@ -13,15 +13,17 @@ const Level19 = () => {
         justify-content property, which aligns items horizontally and accepts
         the following values:"
           definitionText="flex-start: Items align to the left side of the container.
-          <br />
+         
           flex-end: Items align to the right side of the container. center:
-          Items align at the center of the container. <br /> space-between:
-          Items display with equal spacing between them. <br /> space-around:
+          Items align at the center of the container.  space-between:
+          Items display with equal spacing between them.  space-around:
           Items display with equal spacing around them.
 "
-                  exampleText="For example, justify-content: flex-end; will move the frog to the right"
-                  compareData="flex-direction:column; flex-wrap:wrap;"
-                  routePath="level20"
+          exampleText="For example, justify-content: flex-end; will move the frog to the right"
+          compareData="flex-direction:column; flex-wrap:wrap;"
+          routePath="level20"
+          lev="19"
+          ContainerTwo="none"
         />
         {/* container with game */}
         <Graphics19 />

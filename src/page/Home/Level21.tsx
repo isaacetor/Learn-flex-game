@@ -19,9 +19,11 @@ const Level21 = () => {
           Items display with equal spacing between them. <br /> space-around:
           Items display with equal spacing around them.
 "
-                  exampleText="For example, justify-content: flex-end; will move the frog to the right"
-                  compareData="align-content:flex-start"
-                  routePath="level22"
+          exampleText="For example, justify-content: flex-end; will move the frog to the right"
+          compareData="align-content:flex-start"
+          routePath="level22"
+          lev="21"
+          ContainerTwo="none"
         />
         {/* container with game */}
         <Graphics21 />
