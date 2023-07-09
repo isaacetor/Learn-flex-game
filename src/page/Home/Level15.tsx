@@ -11,13 +11,14 @@ const Level15 = () => {
         <Data
           titleText=""
           definitionText=""
-          exampleText="Use the order property to send the red frog to his lilypad."
+          exampleText="Use the order property to send the red circle to the red box."
           compareData="order:-1"
           routePath="level16"
           textAreaOne="none"
           ContainerTwo="block"
           classCss=".red"
           textAreaTwo="flex"
+          lev="15"
         />
         {/* container with game */}
         <Level15Graphic />

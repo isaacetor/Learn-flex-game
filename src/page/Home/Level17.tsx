@@ -1,32 +1,39 @@
 import styled from "styled-components";
-import Data from "../../blocks/components/data/Data";
-import Level4Graphic from "../../blocks/components/graphic/Level4Graphic";
 
-const Level4 = () => {
+import Data from "../../blocks/components/data/Data";
+
+import Level17Graphic from "../../blocks/components/graphic/Level17Graphic";
+
+const Level17 = () => {
   return (
     <div>
       <Wrapper>
         {/* container with data */}
         <Data
           titleText=""
-          definitionText=""
-          exampleText="Now the lilypads on the edges have drifted to the shore, increasing the space between them. Use justify-content. This time, the lilypads have equal spacing between them."
-          compareData="justify-content:space-between"
-          routePath="level5"
-          ContainerTwo="none"
-          lev="4"
+          definitionText="Combine order with align-self to help the frogs to their destinations."
+          exampleText=""
+          compareData="order:2;align-self:flex-end"
+          routePath="level18"
+          textAreaOne="none"
+          ContainerTwo="block"
+          classCss=".yellow"
+          textAreaTwo="flex"
+          secondCodeText="align-items: flex-start;"
+          lev="17"
         />
         {/* container with game */}
-        <Level4Graphic />
+        <Level17Graphic />
       </Wrapper>
     </div>
   );
 };
 
-export default Level4;
+export default Level17;
 
 const Wrapper = styled.div`
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -3,7 +3,7 @@ import { selector, useRecoilValue } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
 import Icon from "./Icon";
 
-const Level16Graphic = () => {
+const Level17Graphic = () => {
   const JustifyState = selector({
     key: "charCountState", // unique ID (with respect to other atoms/selectors)
     get: ({ get }) => {
@@ -17,11 +17,10 @@ const Level16Graphic = () => {
     <div>
       <Wrapper>
         <Div>
+          <IconWrap text={count}>
+            <Icon bgCol="#FAFA41" />
+          </IconWrap>
           <Icon bgCol="#77F87A" />
-
-          <Icon bgCol="#77F87A" />
-
-          {/* moving */}
 
           <IconWrap text={count}>
             <Icon bgCol="#FAFA41" />
@@ -30,22 +29,23 @@ const Level16Graphic = () => {
           <Icon bgCol="#77F87A" />
 
           <Icon bgCol="#77F87A" />
-          <Box2></Box2>
+          {/* <Box2></Box2> */}
         </Div>
       </Wrapper>
     </div>
   );
 };
 
-export default Level16Graphic;
+export default Level17Graphic;
 
 const IconWrap = styled.div<{ text: string }>`
   display: flex;
-  padding: 10px 20px;
 
   :nth-child(1) {
     ${(props) => props.text};
-    z-index: 1;
+    /* z-index: 1; */
+    order: 1;
+    align-self: flex-end;
   }
 `;
 
@@ -53,9 +53,9 @@ const Box2 = styled.div`
   width: 80px;
   height: 80px;
   background-color: #c4c403;
-  position: absolute;
-  bottom: 4px;
-  left: 44.5%;
+  /* position: absolute; */
+  /* bottom: 4px; */
+  /* left: 44.5%; */
   z-index: 0;
 
   @media not all and (min-width: 890px) {
@@ -69,8 +69,6 @@ const Div = styled.div`
   width: 90%;
   height: 90%;
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
 `;
 
 const Wrapper = styled.div`

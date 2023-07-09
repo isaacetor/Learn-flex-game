@@ -1,70 +1,77 @@
 import styled from "styled-components";
+import Icon from "./Icon";
 import { selector, useRecoilValue } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
-import Iconify from "./Iconify";
 
-const Level4Graphic = () => {
+const Graphic12 = () => {
   const JustifyState = selector({
     key: "charCountState", // unique ID (with respect to other atoms/selectors)
     get: ({ get }) => {
       const text = get(IconState);
+
       return text;
     },
   });
+
   const count = useRecoilValue(JustifyState);
 
   return (
     <div>
-      <Wrapper text={count}>
-        <Div>
-          <Box></Box>
-          <Box2></Box2>
-        </Div>
-        <Iconify bgCol="red" />
-        <Iconify bgCol="blue" />
-      </Wrapper>
+      <Container>
+        <Wrapper text={count}>
+          <Div>
+            <Box></Box>
+            <Box></Box>
+          </Div>
+
+          <Icon bgCol="#158b2f" />
+
+          <Icon bgCol="yellow" />
+        </Wrapper>
+      </Container>
     </div>
   );
 };
 
-export default Level4Graphic;
+export default Graphic12;
 
 const Div = styled.div`
   position: absolute;
-  top: 0;
-  padding: 20px;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  margin-left: -20px;
+  z-index: -9;
   display: flex;
   justify-content: space-between;
-`;
-
-const Box2 = styled.div`
-  width: 60px;
-  height: 60px;
-  background-color: orange;
-  z-index: -1;
-  margin-right: 40px;
+  flex-direction: column;
+  gap: 12px;
 `;
 
 const Box = styled.div`
-  width: 60px;
-  height: 60px;
-  background-color: orange;
+  width: 80px;
+  height: 80px;
+  background-color: #070707;
   z-index: -1;
 `;
 
 const Wrapper = styled.div<{ text: string }>`
-  height: 100%;
-  padding: 20px;
+  height: 90%;
+  width: 90%;
   display: flex;
+  gap: 12px;
   ${(props) => props.text};
   position: relative;
   z-index: 999;
-  background-color: #fff;
+
   @media not all and (min-width: 890px) {
     height: 50vh;
   }
+`;
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

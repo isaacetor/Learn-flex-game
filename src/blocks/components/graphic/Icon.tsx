@@ -1,10 +1,14 @@
 import styled, { keyframes } from "styled-components";
 
-const Icon = () => {
+type Cols = {
+  bgCol?: string;
+};
+
+const Icon: React.FC<Cols> = ({ bgCol }) => {
   return (
     <div>
-      <Main>
-        <p>icons</p>
+      <Main bgCol={bgCol}>
+        <p>Eniola</p>
       </Main>
     </div>
   );
@@ -24,11 +28,12 @@ const pulseAnimation = keyframes`
   }
 `;
 
-const Main = styled.div`
+const Main = styled.div<{ bgCol?: string }>`
   width: 100px;
   height: 100px;
-  background-color: darkorange;
+  background-color: ${({ bgCol }) => bgCol};
   border-radius: 999px;
+  top: 0;
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
     0 2px 4px -2px var(--tw-shadow-color);
@@ -44,9 +49,12 @@ const Main = styled.div`
     animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
     animation-iteration-count: infinite;
   }
-
-  @media not all and (min-width: 890px) {
-    width: 60px;
-    height: 60px;
+  @media screen and (min-width: 425px) {
+    width: 70px;
+    height: 70px;
+  }
+  @media screen and (max-width: 375px) {
+    width: 50px;
+    height: 50px;
   }
 `;

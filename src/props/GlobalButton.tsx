@@ -1,9 +1,14 @@
 import { selector, useRecoilValue } from "recoil";
 import { styled, keyframes } from "styled-components";
 import { IconState } from "../util/state/Recoil";
-import { compareData } from "../util/types";
+
 import { FC } from "react";
 import { Link } from "react-router-dom";
+
+type compareData = {
+  compare: string;
+  route: string;
+};
 
 const GlobalButton: FC<compareData> = ({ compare, route }) => {
   const JustifyState = selector({
@@ -20,12 +25,12 @@ const GlobalButton: FC<compareData> = ({ compare, route }) => {
 
   return (
     <div>
-      {trueText! === count ? (
+      {trueText == count ? (
         <Link to={`/${route}`}>
-          <Wrapper>Next</Wrapper>
+          <Wrapper bg="red">Next</Wrapper>
         </Link>
       ) : (
-        <Wrapper disabled style={{ cursor: "not-allowed" }}>
+        <Wrapper disabled style={{ cursor: "not-allowed" }} bg="#fc9696">
           Next
         </Wrapper>
       )}
@@ -47,12 +52,14 @@ const pulseAnimation = keyframes`
   }
 `;
 
-const Wrapper = styled.button`
-  padding: 10px 20px;
+const Wrapper = styled.button<{ bg: string }>`
+  padding: 8px 18px;
   position: absolute;
   bottom: 10px;
   right: 10px;
-
+  /* background-color: #fc9696; */
+  background-color: ${(props) => props.bg};
+  color: #fff;
   animation-name: ${pulseAnimation};
   animation-duration: 2s;
   animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);

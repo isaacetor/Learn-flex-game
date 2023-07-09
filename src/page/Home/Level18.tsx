@@ -1,44 +1,39 @@
 import styled from "styled-components";
-import Graphic from "../../blocks/components/graphic/Graphic";
+import Graphics18 from "../../blocks/components/graphic/Graphics18";
 import Data from "../../blocks/components/data/Data";
 
-const Main = () => {
+const Level18 = () => {
   return (
     <div>
       <Wrapper>
         {/* container with data */}
         <Data
-          titleText="Welcome to LearnFlex, a game where you help Eniola and friends by writing
+          titleText="Welcome to LearnFlex, a game where you help Joan and friends by writing
         CSS code! Guide Eniola to the lilypad on the right by using the
         justify-content property, which aligns items horizontally and accepts
         the following values:"
           definitionText="flex-start: Items align to the left side of the container.
-         
+       
           flex-end: Items align to the right side of the container. center:
           Items align at the center of the container.  space-between:
           Items display with equal spacing between them.  space-around:
-          Items display with equal spacing around them"
+          Items display with equal spacing around them.
+"
           exampleText="For example, justify-content: flex-end; will move the frog to the right"
-          compareData="justify-content:flex-end"
-          routePath="2"
-          textAreaOne="flex"
-          ContainerTwo="none"
-          classCss=""
-          textAreaTwo="none"
-          lev="1"
+          compareData="flex-wrap:wrap;"
+          routePath="level19"
         />
         {/* container with game */}
-        <Graphic />
+        <Graphics18 />
       </Wrapper>
     </div>
   );
 };
 
-export default Main;
+export default Level18;
 
 const Wrapper = styled.div`
-  min-height: 100vh;
-  max-height: 100%;
+  height: 100vh;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

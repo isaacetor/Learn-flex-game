@@ -14,6 +14,7 @@ const Game: FC<gameData> = ({
   ContainerTwo,
   classCss,
   secondCodeText,
+  lev,
 }) => {
   return (
     <div>
@@ -36,6 +37,7 @@ const Game: FC<gameData> = ({
           classCss={classCss}
           textAreaTwo={textAreaTwo}
           secondCodeText={secondCodeText}
+          lev={lev}
         />
       </Wrapper>
     </div>

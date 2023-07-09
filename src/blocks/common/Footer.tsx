@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div>
       <Wrapper>
-        Learn Flex is created by Isaac Etor for CodeLab
+        Learn Flex is created by set06 for CodeLab
         <p> GitHub • Twitter • LinkedIN</p>
       </Wrapper>
     </div>

@@ -15,11 +15,12 @@ const Data: FC<instructionData> = ({
   classCss,
   ContainerTwo,
   secondCodeText,
+  lev,
 }) => {
   return (
     <div>
       <Wrapper>
-        <Header />
+        <Header lev={lev} />
         <Main>
           {/* Header comp */}
 

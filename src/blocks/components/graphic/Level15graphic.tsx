@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 import { selector, useRecoilValue } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
-import Icon2 from "./Icon2";
 import Icon from "./Icon";
 const Level15Graphic = () => {
   const JustifyState = selector({
@@ -18,18 +17,16 @@ const Level15Graphic = () => {
     <div>
       <Wrapper>
         <Div>
+          <Box2 bg="orange"></Box2>
+          <Box2 bg="green"></Box2>
           <Box2 bg="red"></Box2>
-          <Box2 bg="green"></Box2>
-          <Box2 bg="green"></Box2>
-          <Box2 bg="green"></Box2>
           <Box2 bg="green"></Box2>
         </Div>
         <IconWrap text={count}>
-          <Icon2 />
-          <Icon2 />
-          <Icon2 />
-          <Icon />
-          <Icon2 />
+          <Icon bgCol="blue" />
+          <Icon bgCol="red" />
+          <Icon bgCol="yellow" />
+          <Icon bgCol="orange" />
         </IconWrap>
       </Wrapper>
     </div>
@@ -41,9 +38,9 @@ export default Level15Graphic;
 const IconWrap = styled.div<{ text: string }>`
   position: absolute;
   display: flex;
-  gap: 20px;
+  gap: 33px;
 
-  :nth-child(4) {
+  :nth-child(3) {
     ${(props) => props.text};
   }
 `;
@@ -62,8 +59,8 @@ const Div = styled.div`
 `;
 
 const Box2 = styled.div<{ bg: string }>`
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background-color: ${(props) => props.bg};
   z-index: -1;
   /* margin-right: 40px; */

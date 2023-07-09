@@ -1,29 +1,28 @@
 import styled from "styled-components";
 import Data from "../../blocks/components/data/Data";
-import Level4Graphic from "../../blocks/components/graphic/Level4Graphic";
-
-const Level4 = () => {
+import Level6Graphic from "../../blocks/components/graphic/Level6Graphics";
+const Level6 = () => {
   return (
     <div>
       <Wrapper>
         {/* container with data */}
         <Data
-          titleText=""
+          titleText="Lead the frog to the center of the pond using a combination of justify-content and align-items."
           definitionText=""
-          exampleText="Now the lilypads on the edges have drifted to the shore, increasing the space between them. Use justify-content. This time, the lilypads have equal spacing between them."
-          compareData="justify-content:space-between"
-          routePath="level5"
+          exampleText=""
+          routePath="level7"
+          compareData="align-items:center;justify-content:center"
           ContainerTwo="none"
-          lev="4"
+          lev="6"
         />
         {/* container with game */}
-        <Level4Graphic />
+        <Level6Graphic />
       </Wrapper>
     </div>
   );
 };
 
-export default Level4;
+export default Level6;
 
 const Wrapper = styled.div`
   height: 100vh;

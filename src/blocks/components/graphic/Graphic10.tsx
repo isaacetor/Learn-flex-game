@@ -1,69 +1,80 @@
 import styled from "styled-components";
+import Icon from "./Icon";
 import { selector, useRecoilValue } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
-import Iconify from "./Iconify";
 
-const Level4Graphic = () => {
+const Graphic10 = () => {
   const JustifyState = selector({
     key: "charCountState", // unique ID (with respect to other atoms/selectors)
     get: ({ get }) => {
       const text = get(IconState);
+
       return text;
     },
   });
+
   const count = useRecoilValue(JustifyState);
 
   return (
     <div>
-      <Wrapper text={count}>
+      <Wrapper>
         <Div>
           <Box></Box>
-          <Box2></Box2>
+          <Box></Box>
         </Div>
-        <Iconify bgCol="red" />
-        <Iconify bgCol="blue" />
+
+        <IconHold text={count}>
+          <Icon bgCol="red" />
+          <Icon bgCol="green" />
+        </IconHold>
       </Wrapper>
     </div>
   );
 };
 
-export default Level4Graphic;
+export default Graphic10;
+
+const IconHold = styled.div<{ text: string }>`
+  display: flex;
+  gap: 28px;
+  ${(props) => props.text};
+`;
 
 const Div = styled.div`
   position: absolute;
   top: 0;
-  padding: 20px;
+  left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
-  margin-left: -20px;
+  padding: 20px;
+  z-index: -9;
   display: flex;
-  justify-content: space-between;
-`;
 
-const Box2 = styled.div`
-  width: 60px;
-  height: 60px;
-  background-color: orange;
-  z-index: -1;
-  margin-right: 40px;
+  gap: 12px;
 `;
 
 const Box = styled.div`
-  width: 60px;
-  height: 60px;
-  background-color: orange;
+  width: 80px;
+  height: 80px;
+  /* margin-right: 100px;
+  position: absolute; */
+  background-color: #070707;
+
   z-index: -1;
 `;
 
-const Wrapper = styled.div<{ text: string }>`
+const Wrapper = styled.div`
+  background-color: #fff;
   height: 100%;
+  gap: 12px;
+
   padding: 20px;
   display: flex;
-  ${(props) => props.text};
+  justify-content: flex-start;
+
   position: relative;
   z-index: 999;
-  background-color: #fff;
+
   @media not all and (min-width: 890px) {
     height: 50vh;
   }

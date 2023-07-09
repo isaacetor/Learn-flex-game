@@ -12,13 +12,14 @@ const Level16 = () => {
           titleText=""
           definitionText=""
           exampleText="Use the order property to send the red frog to his lilypad."
-          compareData="order:-1"
-          routePath="level16"
+          compareData="align-self:flex-end"
+          routePath="level17"
           textAreaOne="none"
           ContainerTwo="block"
-          classCss=".red"
+          classCss=".yellow"
           textAreaTwo="flex"
           secondCodeText="align-items: flex-start;"
+          lev="16"
         />
         {/* container with game */}
         <Level16Graphic />

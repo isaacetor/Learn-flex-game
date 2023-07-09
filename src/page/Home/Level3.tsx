@@ -13,6 +13,8 @@ const Level3 = () => {
           exampleText="Help all three frogs find their lilypads just by using justify-content. This time, the lilypads have lots of space all around them."
           compareData="justify-content:space-around"
           routePath="4"
+          ContainerTwo="none"
+          lev="3"
         />
         {/* container with game */}
         <Level3Graphic />

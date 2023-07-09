@@ -6,13 +6,14 @@ export type inputData = {
   ContainerTwo?: string;
   classCss?: string;
   secondCodeText?: string;
+  lev?: string;
 };
 
 export interface gameData extends inputData {
   titleText: string;
   definitionText: string;
   exampleText: string;
-  compareData?: string;
+  compareData: string;
   routePath?: string;
 }
 

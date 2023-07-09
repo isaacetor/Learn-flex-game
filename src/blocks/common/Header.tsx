@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { inputData } from "../../util/types";
 
-const Header = () => {
+const Header: React.FC<inputData> = ({ lev }) => {
   return (
     <div>
       <Wrapper>
@@ -8,7 +9,7 @@ const Header = () => {
         <Logo>Learn Flex</Logo>
 
         {/* level display */}
-        <Levels>Level 1</Levels>
+        <Levels>Level {lev}</Levels>
       </Wrapper>
     </div>
   );

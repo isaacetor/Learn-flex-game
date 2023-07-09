@@ -1,29 +1,29 @@
 import styled from "styled-components";
+import Graphic11 from "../../blocks/components/graphic/Graphic11";
 import Data from "../../blocks/components/data/Data";
-import Level4Graphic from "../../blocks/components/graphic/Level4Graphic";
 
-const Level4 = () => {
+const Level11 = () => {
   return (
     <div>
       <Wrapper>
         {/* container with data */}
         <Data
-          titleText=""
-          definitionText=""
-          exampleText="Now the lilypads on the edges have drifted to the shore, increasing the space between them. Use justify-content. This time, the lilypads have equal spacing between them."
-          compareData="justify-content:space-between"
-          routePath="level5"
+          titleText="Help the frogs find their lilypads using flex-direction and justify-content."
+          definitionText="Notice that when the flex direction is a column, justify-content changes to the vertical and align-items to the horizontal"
+          exampleText=""
+          compareData="flex-direction:column;justify-content:flex-end"
+          routePath="12"
           ContainerTwo="none"
-          lev="4"
+          lev="11"
         />
         {/* container with game */}
-        <Level4Graphic />
+        <Graphic11 />
       </Wrapper>
     </div>
   );
 };
 
-export default Level4;
+export default Level11;
 
 const Wrapper = styled.div`
   height: 100vh;
