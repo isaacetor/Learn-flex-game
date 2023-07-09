@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 import { selector, useRecoilValue } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
-import Icon2 from "./Icon2";
 import Icon from "./Icon";
 const Level14Graphic = () => {
   const JustifyState = selector({

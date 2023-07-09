@@ -49,21 +49,6 @@ const IconWrap = styled.div<{ text: string }>`
   }
 `;
 
-const Box2 = styled.div`
-  width: 80px;
-  height: 80px;
-  background-color: #c4c403;
-  /* position: absolute; */
-  /* bottom: 4px; */
-  /* left: 44.5%; */
-  z-index: 0;
-
-  @media not all and (min-width: 890px) {
-    bottom: 3.5px;
-    left: 42.5%;
-  }
-`;
-
 const Div = styled.div`
   position: relative;
   width: 90%;
