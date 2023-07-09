@@ -3,7 +3,7 @@ import Icon from "./Icon";
 import { selector, useRecoilValue } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
 
-const Level5Graphic = () => {
+const Level7Graphic = () => {
   const JustifyState = selector({
     key: "charCountState", // unique ID (with respect to other atoms/selectors)
     get: ({ get }) => {
@@ -33,14 +33,14 @@ const Level5Graphic = () => {
   );
 };
 
-export default Level5Graphic;
+export default Level7Graphic;
 
 const Holds = styled.div`
 display:flex;
-width:400px;
-justify-content:space-between;
+width:100%;
+justify-content:space-around;
 position:absolute;
-margin-left:30px;
+/* margin-left:30px; */
 margin-bottom:30px;
 bottom:0;
 /* align-items:center; */
@@ -55,15 +55,16 @@ bottom:0;
 `
 const Hold = styled.div`
 display:flex;
-width:400px;
-justify-content:space-between;
+width:100%;
+justify-content:space-around;
 align-items:flex-start;
-margin-left:30px;
-margin-top:13px; 
+/* margin-left:30px; */
+margin-bottom:30px; 
 z-index:999;
 @media screen and (min-width:425px){
     width:350px;
  margin-bottom:30px;
+ margin-left:30px;
   }
   @media screen and (max-width:375px){
     width:250px;
@@ -102,9 +103,7 @@ const Wrapper = styled.div<{ text: string }>`
   ${(props) => props.text};
   position: relative;
   z-index: 999;
-  /* flex-direction:column; */
-  /* align-items:flex-end; */
   @media not all and (min-width: 890px) {
-    height: 100vh;
+    height: 120vh;
   }
 `;

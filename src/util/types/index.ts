@@ -2,7 +2,7 @@ export type gameData = {
   titleText: string;
   definitionText: string;
   exampleText: string;
-  compareData?: string;
+  compareData: string;
   routePath?: string;
 };
 
