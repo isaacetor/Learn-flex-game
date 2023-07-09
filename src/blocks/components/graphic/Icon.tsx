@@ -28,6 +28,8 @@ const pulseAnimation = keyframes`
   }
 `;
 
+
+
 const Main = styled.div<{ bgCol?: string }>`
   width: 100px;
   height: 100px;
@@ -48,5 +50,13 @@ const Main = styled.div<{ bgCol?: string }>`
     animation-duration: 2s;
     animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
     animation-iteration-count: infinite;
+  }
+  @media screen and (min-width:425px){
+    width: 70px;
+     height: 70px;
+  }
+  @media screen and (max-width:375px){
+    width:50px;
+    height: 50px;
   }
 `;

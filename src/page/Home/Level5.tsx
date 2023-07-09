@@ -16,6 +16,8 @@ const Level5 = () => {
           flex-end: Items align to the bottom of the container.
 "
           exampleText=""
+          routePath="level6"
+          compareData="align-items:flex-end;"
         />
         {/* container with game */}
         <Level5Graphic />

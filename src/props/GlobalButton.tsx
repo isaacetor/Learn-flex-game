@@ -20,7 +20,7 @@ const GlobalButton: FC<compareData> = ({ compare, route }) => {
 
   return (
     <div>
-      {trueText! === count ? (
+      {trueText === count ? (
         <Link to={`/${route}`}>
           <Wrapper>Next</Wrapper>
         </Link>
