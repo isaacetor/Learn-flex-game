@@ -1,32 +1,32 @@
 import styled from "styled-components";
 
 import Data from "../../blocks/components/data/Data";
-import Level14Graphic from "../../blocks/components/graphic/Level14graphic";
+import Level15Graphic from "../../blocks/components/graphic/Level15graphic";
 
-const Level14 = () => {
+const Level15 = () => {
   return (
     <div>
       <Wrapper>
         {/* container with data */}
         <Data
           titleText=""
-          definitionText="Sometimes reversing the row or column order of a container is not enough. In these cases, we can apply the order property to individual items. By default, items have a value of 0, but we can use this property to also set it to a positive or negative integer value (-2, -1, 0, 1, 2)."
-          exampleText="Use the order property to reorder the frogs according to their lilypads."
-          compareData="order:3"
-          routePath="level15"
+          definitionText=""
+          exampleText="Use the order property to send the red frog to his lilypad."
+          compareData="order:-1"
+          routePath="level16"
           textAreaOne="none"
           ContainerTwo="block"
-          classCss=".yellow"
+          classCss=".red"
           textAreaTwo="flex"
         />
         {/* container with game */}
-        <Level14Graphic />
+        <Level15Graphic />
       </Wrapper>
     </div>
   );
 };
 
-export default Level14;
+export default Level15;
 
 const Wrapper = styled.div`
   min-height: 100vh;

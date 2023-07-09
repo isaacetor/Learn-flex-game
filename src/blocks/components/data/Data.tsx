@@ -11,13 +11,18 @@ const Data: FC<instructionData> = ({
   exampleText,
   compareData,
   routePath,
+  textAreaOne,
+  classCss,
+  ContainerTwo,
+  secondCodeText,
 }) => {
   return (
     <div>
       <Wrapper>
+        <Header />
         <Main>
           {/* Header comp */}
-          <Header />
+
           {/* children / levels */}
           <Game
             titleText={titleText}
@@ -25,6 +30,10 @@ const Data: FC<instructionData> = ({
             definitionText={definitionText}
             compareData={compareData}
             routePath={routePath}
+            textAreaOne={textAreaOne}
+            classCss={classCss}
+            ContainerTwo={ContainerTwo}
+            secondCodeText={secondCodeText}
           />
           {/* footer comp */}
           <Footer />
@@ -42,9 +51,10 @@ const Wrapper = styled.div`
     orange 0%,
     darkorange 100.2%
   );
-  height: 100%;
+  max-height: 100%;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   color: #000;
 `;

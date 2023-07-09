@@ -25,8 +25,9 @@ const Logo = styled.h2`
 `;
 
 const Wrapper = styled.div`
-  width: 100%;
-  padding: 20px 0 20px 0;
+  height: 10vh;
+  max-width: 100%;
+  min-width: 45vw;
   display: flex;
   justify-content: space-between;
   align-items: center;

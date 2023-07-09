@@ -3,13 +3,17 @@ import { FC } from "react";
 import { useRecoilState } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
 import GlobalButton from "../../../props/GlobalButton";
+import { inputData } from "../../../util/types";
 
-interface check {
-  check: string;
-  path: string;
-}
-
-const Code: FC<check> = ({ check, path }) => {
+const Code: FC<inputData> = ({
+  check,
+  path,
+  ContainerTwo,
+  textAreaOne,
+  textAreaTwo,
+  classCss,
+  secondCodeText,
+}) => {
   const [text, setText] = useRecoilState(IconState);
   text.trim();
 
@@ -18,37 +22,38 @@ const Code: FC<check> = ({ check, path }) => {
       <Wrapper>
         <Coding>
           <p>.pond {"{"}</p>
-          <Container>
+          <Container inputDisplay={textAreaOne!}>
             <p>display: flex;</p>
+            <SecondText>{secondCodeText}</SecondText>
             {/* input area */}
-            <textarea
-              onChange={(e) => {
-                setText(e.target.value);
-              }}></textarea>
-          </Container>
-          <p>{"}"}</p>
-        </Coding>
-
-        {/* second coding environment */}
-        <Coding2>
-          <p>.pond {"{"}</p>
-
-          <Container2>
-            <p>display: flex;</p>
-
-            {/* input area */}
-
             <textarea
               onChange={(e) => {
                 setText(e.target.value);
               }}
             ></textarea>
-          </Container2>
+          </Container>
           <p>{"}"}</p>
-        </Coding2>
+          {/* second coding environment */}
+          <Coding2 display={ContainerTwo!}>
+            <p>
+              {classCss} {"{"}
+            </p>
+
+            <Container2 inputDisplay2={textAreaTwo!}>
+              {/* input area */}
+
+              <textarea
+                onChange={(e) => {
+                  setText(e.target.value);
+                }}
+              ></textarea>
+            </Container2>
+            <p>{"}"}</p>
+          </Coding2>
+        </Coding>
 
         {/* button */}
-        <GlobalButton compare={check} route={path} />
+        <GlobalButton compare={check!} route={path!} />
       </Wrapper>
     </div>
   );
@@ -56,24 +61,28 @@ const Code: FC<check> = ({ check, path }) => {
 
 export default Code;
 
-const Container = styled.div`
+const SecondText = styled.p``;
+
+const Container = styled.div<{ inputDisplay: string }>`
   width: 95%;
+
   margin-left: 30px;
   display: flex;
   flex-direction: column;
 
   textarea {
     flex: 1;
+    display: ${({ inputDisplay }) => inputDisplay};
     font-size: 15px;
     color: #000000b0;
     outline: none;
     border: none;
     height: 44px;
     font-family: poppins;
-    display: none;
+    /* display: none; */
   }
 `;
-const Container2 = styled.div`
+const Container2 = styled.div<{ inputDisplay2: string }>`
   width: 95%;
   margin-left: 30px;
   display: flex;
@@ -87,13 +96,14 @@ const Container2 = styled.div`
     border: none;
     height: 44px;
     font-family: poppins;
-    display: none;
+    display: ${({ inputDisplay2 }) => inputDisplay2};
   }
 `;
 
 const Coding = styled.div`
   width: 100%;
-  /* height: 35vh; */
+  height: 30vh;
+  gap: 10px;
   display: flex;
   flex-direction: column;
 
@@ -102,10 +112,10 @@ const Coding = styled.div`
     font-size: 15px;
   }
 `;
-const Coding2 = styled.div`
+const Coding2 = styled.div<{ display: string }>`
   width: 100%;
   /* height: 10vh; */
-  display: flex;
+  display: ${({ display }) => display};
   flex-direction: column;
 
   p {

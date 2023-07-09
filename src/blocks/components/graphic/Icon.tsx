@@ -4,7 +4,7 @@ const Icon = () => {
   return (
     <div>
       <Main>
-        <p>icon</p>
+        <p>icons</p>
       </Main>
     </div>
   );
@@ -43,5 +43,10 @@ const Main = styled.div`
     animation-duration: 2s;
     animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
     animation-iteration-count: infinite;
+  }
+
+  @media not all and (min-width: 890px) {
+    width: 60px;
+    height: 60px;
   }
 `;

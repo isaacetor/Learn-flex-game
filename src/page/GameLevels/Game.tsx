@@ -9,6 +9,11 @@ const Game: FC<gameData> = ({
   exampleText,
   compareData,
   routePath,
+  textAreaOne,
+  textAreaTwo,
+  ContainerTwo,
+  classCss,
+  secondCodeText,
 }) => {
   return (
     <div>
@@ -23,7 +28,15 @@ const Game: FC<gameData> = ({
         {/* example section */}
         <p>{exampleText}</p>
         {/* game code */}
-        <Code check={compareData!} path={routePath!} />
+        <Code
+          check={compareData!}
+          path={routePath!}
+          textAreaOne={textAreaOne}
+          ContainerTwo={ContainerTwo}
+          classCss={classCss}
+          textAreaTwo={textAreaTwo}
+          secondCodeText={secondCodeText}
+        />
       </Wrapper>
     </div>
   );
@@ -41,10 +54,15 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+
   align-items: space-between;
 
   p {
     font-size: 15px;
+    width: 89%;
+    letter-spacing: 1px;
+    text-align: justify;
+    color: #000000d5;
   }
 
   @media not all and (min-width: 890px) {
