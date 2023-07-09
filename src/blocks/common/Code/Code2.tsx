@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import GlobalButton from "../../../props/GlobalButton";
 import { useRecoilState } from "recoil";
 import { IconState } from "../../../util/state/Recoil";
+import { FC } from "react";
 
 interface check {
   check: string;
